@@ -5,7 +5,7 @@ import { useState } from "react"
 export default function CalcImc(){
     const [autu, setAutu] = useState<number>(0)
     const [peso, setPeso] = useState<number>(0)
-    const [imc, setImc] = useState<number>( )
+    const [imc, setImc] = useState<number>(0 )
     function calcular (){
        
        let res = peso/(autu*autu)
