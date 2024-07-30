@@ -1,69 +1,70 @@
 
+interface TabelaImcProps{
+    imc:number
+}
 
-export default function TabelaImc( ){
+export default function TabelaImc(props:TabelaImcProps ){
     return(
         <>
-        <div>
-            <div>
-                <div>
+        <div className="mx-2 mb-2 ">
+            <div className="flex ">
+                <div className=" font-bold">
                     Classificaçao
 
                 </div>
-                <div>
-                    IMC
-                </div>
+    
             </div>
-            <div>
-                <div>
+        <div  className={`flex m-1`+(props.imc <=18.9 ? 'destaque': '')}>
+                <div className="w-1/2 border">
                     Abaixo do Peso
                     
                 </div>
-                <div>
-                Abaixo de 18,5
+                <div  className="w-1/2 border">
+                Menor  18,5
                 </div>
-            </div>
-            <div>
-                <div>
+            </div> 
+            <div  className={`flex  m-1`+(props.imc <24.9 ? 'destaque': '') }>
+                <div  className="w-1/2 border">
                     Peso Normal
                     
                 </div>
-                <div>
+                <div  className="w-1/2 border">
                     Entre 18,5 e 24,9
                 </div>
-            </div>
-            <div>
-                <div>
+            </div >
+            <div  className="flex m-1  ">
+                <div  className="w-1/2 border">
                     Sobrepeso
                     
                 </div>
-                <div>
+                <div  className="w-1/2 border">
                     Entre 25 e 29,9
                 </div>
             </div>
-            <div>
-                <div>
+            <div  className="flex  m-1 ">
+                <div  className="w-1/2 border">
                     Obesidade Grau I
                     
                 </div>
-                <div>
+                <div  className="w-1/2 border">
                     Entre 30 e 34,9
                 </div>
             </div>
-            <div>
-                <div>
+            <div  className="flex m-1  ">
+                <div  className="w-1/2 border">
                     Obesidade Grau II
                     
                 </div>
-                <div>
+                <div  className="w-1/2 border">
                     Entre 35 e 39,9
                 </div>
             </div>
-            <div>
-                <div>
+            <div  className="flex m-1  ">
+                <div  className="w-1/2 border">
                     Obesidade Grau III
                     
                 </div>
-                <div>
+                <div  className="w-1/2 border">
                     Maior que 40
                 </div>
             </div>
